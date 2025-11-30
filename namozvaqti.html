@@ -503,7 +503,8 @@ nav a:hover {
 
             const iso = date.toLocaleDateString("en-CA");
 
-            const api = `${API_URL_BASE}timingsByCity?city=${loc}&country=Uzbekistan&method=1&date=${iso}`;
+            const api =`${API_URL_BASE}timingsByCity?city=${loc}&country=Uzbekistan&method=1`;
+;
 
             let iftor = STATIC_PRAYER_TIMES.Maghrib;
             let imsak = STATIC_PRAYER_TIMES.Imsak;
@@ -536,7 +537,8 @@ nav a:hover {
         document.getElementById('current-city-name').textContent = `(${name})`;
 
         const date = new Date().toLocaleDateString("en-CA");
-        const api = `${API_URL_BASE}timingsByCity?city=${loc}&country=Uzbekistan&method=1&date=${date}`;
+        const api = `${API_URL_BASE}timingsByCity?city=${loc}&country=Uzbekistan&method=1`;
+
 
         try {
             const res = await fetch(api);
