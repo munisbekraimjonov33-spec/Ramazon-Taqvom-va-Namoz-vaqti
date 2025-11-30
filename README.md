@@ -1,1 +1,0 @@
-# Ramazon-Taqvom-va-Namoz-vaqti

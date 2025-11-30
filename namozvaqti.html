@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕌 O'zbekiston Ramazon Taqvimi va Namoz Vaqtlari</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./namozvaqti.css">
+</head>
+<body>
+
+    <div id="subscription-modal" class="modal">
+        <div class="modal-content glass-card">
+            <h2>Saytga Kirish 🔒</h2>
+            <p class="large-text"><strong>Saytni ochish uchun bizning Telegram kanalimizga obuna bo‘ling.</strong></p>
+            <p>Telegram kanalimiz: <strong class="telegram-id">@Raimjonov_28</strong></p>
+            <a href="https://t.me/Raimjonov_28" target="_blank" class="btn btn-telegram">1. Telegramga O'tish</a>
+            <button id="verify-subscription" class="btn btn-primary" disabled>2. Obunani Tasdiqlash</button>
+            <p class="small-text">*Majburiy qadam. Avval Telegramga o'tib, 5 soniya kuting.</p>
+        </div>
+    </div>
+
+    <div id="main-content" class="hidden">
+        
+        <header id="main-header">
+            <h1 class="logo">Oson Taqvim 🕌</h1>
+            <nav>
+                <a href="#namoz">Namoz Vaqtlari</a>
+                <a href="#taqvim">Ramazon Jadvali</a>
+            </nav>
+        </header>
+
+        <main class="container">
+
+            <section id="namoz" class="prayer-times-section">
+                <div class="prayer-header">
+                    <h2 class="section-title">Bugungi namoz vaqtlari <span id="current-city-name">(Samarqand)</span></h2>
+                    
+                    <div class="location-control">
+                        <label for="location-selector">Viloyatni tanlang:</label>
+                        <select id="location-selector" class="dropdown">
+                            </select>
+                    </div>
+                </div>
+
+                <div class="countdown-timers">
+                    <div class="timer-card glass-card large-timer">
+                        <p>Keyingi vaqtgacha qoldi:</p>
+                        <div id="next-prayer-countdown" class="countdown-display">00:00:00</div>
+                    </div>
+                    
+                    <div id="iftar-countdown-card" class="timer-card glass-card hidden-timer large-timer">
+                        <p>Iftorlikgacha qoldi:</p>
+                        <div id="iftar-countdown" class="countdown-display">--:--:--</div>
+                    </div>
+                </div>
+
+                <div class="prayer-table-container glass-card">
+                    <table class="simple-table">
+                        <thead><tr><th>Namoz nomi</th><th>Vaqti</th></tr></thead>
+                        <tbody id="prayer-times-body">
+                            <tr><td>Saharlik (Tong)</td><td data-time="Imsak">--:--</td></tr>
+                            <tr><td>Bomdod</td><td data-time="Fajr">--:--</td></tr>
+                            <tr><td>Quyosh</td><td data-time="Sunrise">--:--</td></tr>
+                            <tr><td>Peshin</td><td data-time="Dhuhr">--:--</td></tr>
+                            <tr><td>Asr</td><td data-time="Asr">--:--</td></tr>
+                            <tr><td>Shom (Iftor)</td><td data-time="Maghrib">--:--</td></tr>
+                            <tr><td>Xufton</td><td data-time="Isha">--:--</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <hr>
+
+            <section id="taqvim">
+                <div class="taqvim-controls glass-card">
+                    <h2>🗓 Ramazon Taqvimi (2026-yil)</h2>
+                    
+                    <div id="ramadan-info" class="ramadan-info-grid">
+                        <div class="info-item"><strong>Boshlanish:</strong> <span id="start-date">18 Fevral</span></div>
+                        <div class="info-item"><strong>Tugash:</strong> <span id="end-date">19 Mart</span></div>
+                        <div class="info-item"><strong>Ro‘za kuni:</strong> <span id="fast-days">--</span></div>
+                        <div class="info-item"><strong>Yil tanlash:</strong> 
+                            <select id="year-selector" class="dropdown small-dropdown">
+                                </select>
+                        </div>
+                    </div>
+                    <p class="ramadan-note">* Namoz vaqtlarining farqi har bir viloyat markazi uchun taxminan +/- 1-5 daqiqa bo‘lishi mumkin.</p>
+                </div>
+                
+
+                <div class="taqvim-table-container glass-card">
+                    <h3>Ro‘za kunlari jadvali</h3>
+                    <table id="ramadan-calendar" class="wide-table">
+                        <thead>
+                            <tr>
+                                <th>Ro‘za Kuni</th>
+                                <th>Sanasi</th>
+                                <th>Saharlik (Imsak)</th>
+                                <th>Iftorlik (Shom)</th>
+                                <th>Izoh</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025. Barcha huquqlar himoyalangan. Dasturchi: <a href="https://t.me/Raimjonov_28" target="_blank">@Raimjonov_28</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./namozvaqti.js"></script>
+</body>
+</html>
